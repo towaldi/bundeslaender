@@ -32,15 +32,15 @@ async function loadGermanFederalStates() {
    Render state-cards
    ========================================================================== */
 /**
+ * Function parameter/variable 'filter' is optional (sometimes variable is set and sometimes not)
  * 1. Get 'state-cards' element
  * 2. Clear/delete all inside div
  * 3. Iteration through each state
  * 3.1. Add a div (+ content) for each state into 'state-cards' div
  * 4. Additional const population to change '.' into ','
  * 5. Get first letter of state -> .charAt(0)
- * 6. If letter already pushed into array -> if statement to avoid duplication
- * 
- *  
+ * 6. If 'filter' don't exit or 'filter' = 'firstLetter's
+ * 7. If letter already pushed into array -> if statement to avoid duplication
  */
 
 function renderGermanFederalStates(filter) {
@@ -93,5 +93,4 @@ function renderFilterLetters() {
 
 function setFilter(letter) {
     renderGermanFederalStates(letter);
-
 }
