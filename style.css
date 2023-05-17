@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Reset all
+   ========================================================================== */
+
+/**
+ * 1. Reset all the pre-configured settings
+ * 2. Basic body styling
+ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Display & box model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*height: 100vh;*/
+    margin: 5px;  
+}
+
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/**
+ * Styling of all components
+ */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.header {
+    /* Positioning */
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* Display & box model */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px 16px;
+    /* Other */
+    background-color: #DDDDDD;
+}
+
+.state-cards {
+    /* Display & box model */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
+}
+
+.state-card {
+    /* Display & box model */
+    display: flex;
+    flex-direction: column;
+    width: calc(33% - 10px);
+    padding: 10px;
+    /* Other*/
+    border: 10px solid #EEEEEE;
+    cursor: pointer;
+    transition: all 0.1 ease-in-out;
+}
+
+.filter {
+    /* Display & box model */
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 10px 0;
+    /* Other */
+    cursor: pointer;
+}
+
+.filter-letter {
+    /* Display & box model */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    /* Other */
+    background-color: #AEAFB7;
+
+}
+
+/* ==========================================================================
+   Effects
+   ========================================================================== */
+.state-card:hover {
+    /* Other */
+    border: 10px solid #AEAFB7;
+}
+
+a {
+    /* Other */
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   Responsive behavior
+   ========================================================================== */
+/**
+ * 1. 
+*/
+
+@media screen and (max-width: 800px) {
+    .state-card {
+        /* Display & box model */
+        width: calc(50% - 10px);       
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .state-card {
+        /* Display & box model */
+        width: calc(100% - 10px);  
+    }
+}
+
+
+/* ==========================================================================
+   Font
+   ========================================================================== */
+
+/**
+ * No implementation of external font libraries
+*/
+
+/* General rules */
+h1, h2, p, .filter-letter {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    line-break: anywhere;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #AEAFB7;
+}
